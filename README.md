@@ -13,5 +13,5 @@ API_KEY=THE NEW YORK TIMES API KEY
 ```
 
 You can find API docs here and generate API KEY using it.
-https://developer.nytimes.com/
-https://developer.nytimes.com/docs/top-stories-product/1/overview
+- https://developer.nytimes.com/
+- https://developer.nytimes.com/docs/top-stories-product/1/overview

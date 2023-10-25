@@ -10,7 +10,6 @@ const apiKey = process.env.API_KEY;
 // @access Public
 const getTopStories = async (req, res) => {
     try {
-        console.log(apiKey);
         const response = await axios.get(
             `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`
         );
