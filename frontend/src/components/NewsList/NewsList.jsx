@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import NewsCard from './NewsCard/NewsCard';
+import Loader from "../Loader.jsx";
 
 const NewsList = () => {
     const [stories, setStories] = useState([]);
@@ -11,15 +11,19 @@ const NewsList = () => {
             .catch((error) => console.error(error));
     }, []);
 
-    console.log(stories);
+    console.log(stories.length);
 
     return (
         <div className="news-list">
             {stories.map((story, index) => (
-                <NewsCard key={index} story={story} />
+                <React.Suspense fallback={<Loader/>} key={index}>
+                    <LazyNewsCard story={story} />
+                </React.Suspense>
             ))}
         </div>
     );
 };
+
+const LazyNewsCard = React.lazy(() => import('./NewsCard/NewsCard.jsx'));
 
 export default NewsList;
