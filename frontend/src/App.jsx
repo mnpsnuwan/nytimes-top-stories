@@ -1,11 +1,11 @@
 import Header from "./components/Header.jsx";
+import HomeScreen from "./screens/HomeScreen.jsx";
 
 const App = () => {
     return (
         <>
             <Header />
-            <br/>
-            <h1 style={{textAlign:"center"}}>New York Times Top Stories</h1>
+            <HomeScreen />
         </>
     )
 }
