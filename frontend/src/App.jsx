@@ -1,7 +1,11 @@
+import Header from "./components/Header.jsx";
+
 const App = () => {
     return (
         <>
-            <h1>New York Times Top Stories</h1>
+            <Header />
+            <br/>
+            <h1 style={{textAlign:"center"}}>New York Times Top Stories</h1>
         </>
     )
 }
